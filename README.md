@@ -8,17 +8,11 @@
 
 ## Objective
 
-You will read the provided Java codebase and design **comprehensive JUnit tests** for each class. Your tests must both **validate intended behaviors** and **reveal defects**. You will also submit a short report documenting **why** each test exists, its **verdict**, and any **comments/observations**, plus a **separate defects list** with suggested fixes.
+You will read the provided Java codebase and design comprehensive **JUnit tests** for each class. Your tests must both validate intended behaviors and reveal defects. You will also submit a short report documenting **why** each test exists, its **verdict**, and any **comments/observations**, plus a **separate defects list** with suggested fixes.
 
-You will find the documentation in `documentation.md` file and the codebase in the `src/` directory.
+> You will find the documentation in `documentation.md` file and the codebase in the `src/` directory.
 
-> **Do not modify production code.** Your job is to test it, document behaviors, and recommend fixes.
-
----
-
-## Scope of Testing (per class)
-
-Write meaningful test cases for **each** of the following classes:
+**Do not modify production code.** Your job is to test it, document behaviors, and recommend fixes.
 
 ---
 
@@ -42,7 +36,7 @@ test/
 <student_id>_unit_test_report.pdf
 ```
 
-* Put **only your test files** in `test/`. **Do not include** the source code or class files or build files under test.
+* Put **only your test files** in `test/`. **Do not include** the source code, class files or build files under test.
 * The PDF report format is described below.
 * **Ensure the ZIP structure is exactly as shown**. As an automated script will check your tests.
 
@@ -52,12 +46,12 @@ test/
 
 ### A) Test Case List (table)
 
-For **every test** you wrote, include a row with the following columns:
+For every test you wrote, include a row with the following columns:
 
 * **Test ID**.
 * **Class.Method** under test.
-* **Why this test?** should state the specific rule/edge case (e.g., “Verify truncated hours billing (Duration.toHours) on 90-minute booking”).
-* **Verdict** is the test outcome against the current code (not your expectation of a ‘correct’ system).
+* **Why this test?** should state the specific rule/edge case.
+* **Verdict** is the test outcome against the current code.
 * **Comments/Observations** on behavior, exceptions, edge cases, etc.
 
 ### B) Defects List (separate section)
@@ -68,11 +62,6 @@ List **each discovered defect** with a suggested fix:
 * **Description** of the defect.
 * **Suggested Fix** (brief, no code needed).
 
-## Technical Requirements
-
-* **Language/Runtime:** Java 17+
-* **Testing:** JUnit 5 (no other libraries)
-* **No code changes** in production classes. Your tests must adapt to current behavior and document any discrepancies.
 
 ### Running Tests
 
@@ -83,15 +72,14 @@ List **each discovered defect** with a suggested fix:
 
 ## Academic Integrity
 
-* This is an **individual** assignment.
-* **Any form of unfair means** (plagiarism, sharing code, AI-generated tests without understanding, collusion, etc.) is strictly prohibited.
+* **Any form of unfair means** (plagiarism, sharing code, AI-generated tests or collusion, etc.) is strictly prohibited.
 * **Penalty:** score **0** on this assignment **and** deduction from other assessments.
 
 ---
 
 ## Reminders
 
-* Design tests to be order-independent and resilient to the system’s static global state (use unique data per test).
+* **Design tests to be order-independent** and resilient to the system’s static global state.
 * Document current behavior even when you believe it’s wrong; reflect that in verdict and defects sections.
 
 ---
