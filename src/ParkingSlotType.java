@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
-
-public class ParkingSlotType {
+public enum ParkingSlotType {
+    COMPACT,
+    REGULAR,
+    LARGE,
+    HANDICAPPED
 }

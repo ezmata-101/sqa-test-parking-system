@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
-public class BookingStatus {
+public enum BookingStatus {
+    ACTIVE,
+    COMPLETED,
+    CANCELLED
 }
