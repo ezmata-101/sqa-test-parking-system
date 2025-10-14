@@ -87,4 +87,8 @@ public class ParkingSlot {
     public List<Booking> getBookings() {
         return bookings;
     }
+
+    public double getBalance() {
+        return wallet.getBalance();
+    }
 }

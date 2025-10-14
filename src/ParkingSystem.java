@@ -2,13 +2,22 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public class ParkingSystem {
-    private static final List<Vehicle> vehicles;
-    private static final List<ParkingSlot> parkingSlots;
-    private static final List<Booking> bookings;
-    private static final double PARKING_RATE_PER_HOUR = 10.0;
-    private static final Wallet SYSTEM_WALLET = new Wallet();
+    private List<Vehicle> vehicles;
+    private List<ParkingSlot> parkingSlots;
+    private List<Booking> bookings;
+    private double PARKING_RATE_PER_HOUR = 10.0;
+    private Wallet SYSTEM_WALLET = new Wallet();
 
-    static {
+    private static ParkingSystem instance = null;
+
+    public static ParkingSystem getInstance() {
+        if (instance == null) {
+            instance = new ParkingSystem();
+        }
+        return instance;
+    }
+
+    private ParkingSystem() {
         vehicles = new java.util.ArrayList<>();
         parkingSlots = new java.util.ArrayList<>();
         bookings = new java.util.ArrayList<>();
@@ -55,11 +64,11 @@ public class ParkingSystem {
         SYSTEM_WALLET.transferFunds(booking.getVehicle().getWallet(), booking.getAmount() * 0.9);
     }
 
-    public static void addVehicle(Vehicle vehicle) {
+    public void addVehicle(Vehicle vehicle) {
         vehicles.add(vehicle);
     }
 
-    public static void addParkingSlot(ParkingSlot slot) {
+    public void addParkingSlot(ParkingSlot slot) {
         parkingSlots.add(slot);
     }
 
@@ -91,6 +100,50 @@ public class ParkingSystem {
             default:
                 return 1.0;
         }
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
+    }
+
+    public List<ParkingSlot> getParkingSlots() {
+        return parkingSlots;
+    }
+
+    public void setParkingSlots(List<ParkingSlot> parkingSlots) {
+        this.parkingSlots = parkingSlots;
+    }
+
+    public List<Booking> getBookings() {
+        return bookings;
+    }
+
+    public void setBookings(List<Booking> bookings) {
+        this.bookings = bookings;
+    }
+
+    public double getPARKING_RATE_PER_HOUR() {
+        return PARKING_RATE_PER_HOUR;
+    }
+
+    public void setPARKING_RATE_PER_HOUR(double PARKING_RATE_PER_HOUR) {
+        this.PARKING_RATE_PER_HOUR = PARKING_RATE_PER_HOUR;
+    }
+
+    public Wallet getSYSTEM_WALLET() {
+        return SYSTEM_WALLET;
+    }
+
+    public void setSYSTEM_WALLET(Wallet SYSTEM_WALLET) {
+        this.SYSTEM_WALLET = SYSTEM_WALLET;
+    }
+
+    public double getBalance() {
+        return SYSTEM_WALLET.getBalance();
     }
 }
 

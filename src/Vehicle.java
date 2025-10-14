@@ -27,6 +27,10 @@ public class Vehicle {
         return wallet;
     }
 
+    public double getBalance() {
+        return wallet.getBalance();
+    }
+
     @Override
     public String toString() {
         return "Vehicle{" +
