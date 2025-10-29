@@ -5,7 +5,27 @@
 * **Submission file:** `<student_id>_unit_test.zip` (structure below)
 
 ---
+---
+Defects: 
+1. **Invalid booking status transitions (completed ↔ cancelled)**
+2. **Unnecessary Availability check for cancelled/completed bookings**
+3. **Truck compatibility check missing**
+4. **Microcar (missing break statement inside switch block) issue**
+5. **Negative initial balance for wallet**
+6. **Negative IDs are allowed**
+7. **Duplicate ID can be used**
+8. **Invalid or inconsistent booking time (end < start / 0 hours)**
+9. **Fractional hours calculation issue**
+10. **Bookings can be placed for past slots**
+11. **Insufficient funds check missing/failed**
+12. **Multiple financial transactions / repeated completion–cancellation handling**
+13. **Availability check missing in booking method**
+14. **Slot availability / invalid slotID accepted**
+15. **Booking conflict (same slot/vehicle overlap)**
+16. **Null checks missing**
+17. **Concurrency or synchronisation issue**
 
+---
 ## Objective
 
 You will read the provided Java codebase and design comprehensive **JUnit tests** for each class. Your tests must both validate intended behaviors and reveal defects. You will also submit a short report documenting **why** each test exists, its **verdict**, and any **comments/observations**, plus a **separate defects list** with suggested fixes.
