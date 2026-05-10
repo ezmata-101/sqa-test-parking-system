@@ -1,7 +1,7 @@
 # Assignment Announcement: Unit Testing — Parking Slot Booking (With Intentional Defects)
 
-* **Assignment Type:** Individual or a group of maximum 5 students
-* **Deadline:** **Wednesday, January 28, 2026, 11:59 PM**
+* **Assignment Type:** Individual or a group of maximum 4 students
+* **Deadline:** **Discussed during the class.**
 * **Submission file:** `<student_id>_unit_test.zip` (structure below)
 
 ---
@@ -11,7 +11,7 @@ You will read the provided Java codebase and design comprehensive **JUnit tests*
 
 > You will find the documentation in `documentation.md` file and the codebase in the `src/` directory.
 
-**Do not modify production code.** Your job is to test it, document behaviors, and recommend fixes.
+**Do not modify code.** Your job is to test it, document bugs.
 
 ---
 
@@ -32,16 +32,19 @@ test/
   ParkingSlotTest.java
   BookingTest.java
   ParkingSystemTest.java
-<student_id>_unit_test_report.pdf
+<student_id>_unit_test_report.md
 ```
 
 * Put **only your test files** in `test/`. **Do not include** the source code, class files or build files under test.
-* The PDF report format is described below.
+* The **Markdown** report format is described below.
 * **Ensure the ZIP structure is exactly as shown**. As an automated script will check your tests.
 
 ---
 
-## Report Requirements (`<student_id>_unit_test_report.pdf`)
+## Report Requirements (`<student_id>_unit_test_report.md`)
+
+### 0) Team members
+* Student Id and Name of team members.
 
 ### A) Test Case List (table)
 
@@ -53,13 +56,15 @@ For every test you wrote, include a row with the following columns:
 * **Verdict** is the test outcome against the current code.
 * **Comments/Observations** on behavior, exceptions, edge cases, etc.
 
-### B) Defects List (separate section)
+### B) Defects List (A separate table / list)
 
 List **each discovered defect** with a suggested fix:
 * **Defect ID**.
 * **Class.Method** where the defect was found.
 * **Description** of the defect.
-* **Suggested Fix** (brief, no code needed).
+
+### C) Individual Contribution
+* A concise breakdown of the tasks performed by each team member
 
 
 ### Running Tests
@@ -71,7 +76,7 @@ List **each discovered defect** with a suggested fix:
 
 ## Academic Integrity
 
-* **Any form of unfair means** (plagiarism, sharing code, AI-generated tests or collusion, etc.) is strictly prohibited.
+* **Any form of unfair means** (plagiarism, sharing code, AI-generated tests etc.) is strictly prohibited.
 * **Penalty:** score **0** on this assignment **and** deduction from other assessments.
 
 ---
